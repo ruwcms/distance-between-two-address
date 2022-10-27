@@ -185,6 +185,7 @@ return [
         /*
          * Package Service Providers...
          */
+        TeamPickr\DistanceMatrix\Frameworks\Laravel\DistanceMatrixServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -209,6 +210,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'DistanceMatrix' => \TeamPickr\DistanceMatrix\Frameworks\Laravel\DistanceMatrix::class,
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 

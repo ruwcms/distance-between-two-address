@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
+Route::get('/employees', [\App\Http\Controllers\EmployeeController::class, 'index']);
+Route::post('/newemployee', [\App\Http\Controllers\EmployeeController::class, 'store']);
+Route::patch('/updateemployee/{employee}', [\App\Http\Controllers\EmployeeController::class, 'update']);
